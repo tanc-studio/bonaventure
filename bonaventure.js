@@ -1,5 +1,5 @@
 // <script src="https://8cvd38-5000.csb.app/bon.js"></script> 
-// <script src="https://cdn.jsdelivr.net/gh/tanc-studio/bonaventure/bon.js"></script> 
+// <script src="https://cdn.jsdelivr.net/gh/tanc-studio/bonaventure/bonaventure.js"></script> 
 
 // Page Scroll-----------------------------------------------------------
 let lenis

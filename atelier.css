@@ -2,7 +2,8 @@
 /* <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tanc-studio/bonaventure/atelier.css"> */
 
 
-
+body {background-color: blue;}
+* {border: solid red 4px;}
 
 .grid-abstract  {
  grid-template-areas:
