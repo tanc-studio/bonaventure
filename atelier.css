@@ -5,6 +5,7 @@
 body {background-color: blue;}
 * {border: solid red 4px;}
 
+
 .grid-abstract  {
  grid-template-areas:
    ". . . . . . . . . . . ."
