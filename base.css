@@ -1,0 +1,253 @@
+/* Sitewide  --------------------------------- */
+/* */
+html  {
+ height: auto; 
+ overflow-y: scroll; 
+}
+
+.fade-effect {
+ opacity: 0; 
+}    
+
+:root {
+ --lan: 50rem;
+ --lan-img: 30%;
+ --lan-ratio: 1.5/1;
+
+ --box-sm: 22rem;
+ --box: 25rem;
+ --box-lg: 28rem;
+ --box-img: 43%;
+ --box-ratio: 1/1;
+
+ --por-sm: 21rem;
+ --por: 25rem;
+ --por-ratio: 1/1.25;
+ --por-img: 55%;
+
+ --por-tall: 22rem;
+ --por-tall-img: 70%;
+ --por-tall-img-2: 90%;
+ --por-tall-ratio: 1/1.65;
+ --por-tall-ratio-2: 1/1.95; 
+}
+
+/* Page Transition  -------------------------- */
+body .transition {
+ display: block; 
+}
+
+.w-editor .transition {
+ display: none; 
+}
+
+.no-scroll-transition {
+ overflow: hidden; 
+ position: relative; 
+}
+
+/* Slider  ----------------------------------- */
+.w-slider-dot {
+ width: 0.3rem; 
+ height: 0.3rem; 
+ background-color: rgb(196, 196, 196);
+}
+
+.w-slider-dot.w-active {
+ background-color: rgb(4, 4, 4);
+}
+
+.w-slider-nav {
+ right: auto;
+}
+
+.slide-arrow.swiper-button-next::after, .slide-arrow.swiper-button-prev::after {
+ display: none;
+}
+
+.slide-arrow-left {
+ cursor: url("https://uploads-ssl.webflow.com/6526c5efa9dadf82679d4cbe/659d5d3849088fcd7ab116b4_arr-prev.svg"), auto !important;
+}
+
+.slide-arrow-right {
+ cursor: url("https://uploads-ssl.webflow.com/6526c5efa9dadf82679d4cbe/659d5d38da3f511b9d5446ba_arr-next.svg"), auto !important;
+}
+
+
+/* Grids  ----------------------------------- */
+.grid-abstract  {
+ display: grid; 
+ grid-template-columns: repeat(12, 1fr);
+ grid-column-gap: 1rem;  
+ grid-row-gap: 7rem; 
+}
+
+.grid-abstract [product-name] { 
+ aspect-ratio: var(--box-ratio);
+}
+
+.grid-normal { 
+ margin-bottom: 12rem;
+}
+
+.grid-normal .card-info { 
+ margin-top: 1.25rem;
+}
+
+.grid-normal .card-image { 
+ transform: scale(1);
+}
+
+.grid-normal .card.enable-transition:hover .card-image { 
+ transform: scale(1.2);
+}
+
+
+/* Cards  ----------------------------------- */
+.card-image {
+ transition: none;
+}
+
+.card.enable-transition .card-image {
+ transition: transform 12s ease;
+}
+
+.card-text {
+ opacity: 0;    
+ transition: all 1s ease-out;
+ transform: translateY(.5rem);
+}
+
+.card:hover .card-text {
+ opacity: 1; 
+ transform: translateY(0em); 
+ transition-delay: .5s;
+}
+
+.grid-normal .card-text {
+ display: none;
+}
+
+.card .card-info {
+ transition: opacity 0.5s ease-out;
+}
+   
+.card:hover .card-info {
+ opacity: 1  !important;
+}
+
+     /* background: rgb(33, 182, 19); */
+     /* border: solid green 5px; */
+
+/* Media  ----------------------------------- */
+
+@media only screen and (max-width: 1024px) {
+
+ .grid-abstract {
+     grid-template-columns: repeat(10, 1fr);
+     grid-column-gap: 1rem;
+     grid-row-gap: 7rem; 
+ }
+
+ .grid-abstract [product-name] {       
+     width: 100%; 
+     margin: auto; 
+ }
+
+ .card {
+     pointer-events: none;
+ }
+     
+ .card-text  {
+     display: none; 
+ }
+
+ /* .main-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+     height: auto; 
+ }
+
+ .main-product {
+     position: relative;
+     height: auto !important;
+ }
+
+ .page-half {
+     display: flex;
+     width: 100%;
+     height: auto;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .page-half-image-slider {
+     margin-top: 6rem;
+
+ }
+
+ .page-half-product-info {
+     padding-top: 4rem;
+     padding-bottom: 6rem;
+ }
+
+ .slider-container {
+     width: 100%;
+     height: 80%;
+     justify-content: center;
+     align-items: center;
+     margin: 38px 0 38px 38px;
+     display: flex;
+     position: relative;
+     margin: 0 auto;
+ } */
+
+ .slider-dots {
+     margin-bottom: -3rem;
+ }
+
+ /* html, body {
+ background-color: blueviolet;
+ } */
+}  
+
+@media only screen and (max-width: 830px) {
+
+ .grid-abstract {
+     grid-row-gap: 4rem; }
+}   
+
+
+@media only screen and (max-width: 767px) {
+
+ .grid-normal {
+     margin-bottom: 4rem;}
+}   
+
+
+
+.icon-svg {
+   width: 1.5rem;
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   display: none;
+ }
+
+ .icon-visible {
+   display: block;
+ }
+
+ .icon-A.icon-visible {
+   display: inline;
+ }
+ 
+
+
+
+
+
+

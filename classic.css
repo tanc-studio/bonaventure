@@ -1,0 +1,222 @@
+/* <link rel="stylesheet" type="text/css" href="https://8cvd38-5000.csb.app/classic-page.css"> */
+
+.grid-abstract {
+    grid-template-areas:
+    ". . . . . . . . . . . ."
+    ". . . E E E E E E E E ." 
+    ". . . . . . . . . . . ."
+    ". B B B B . . . . . . ."
+    ". . . . . . . . D D D D"
+    ". C C C C C . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . F F F G G G"
+    "A A A A A A A A . . . ." 
+    ". . . . . . . . . . . ."
+    ". . . . . . . H H H H ."
+    ". . I I I I . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . J J J J J J J J ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."   
+    ". L L L L . . . . . . ."
+    ". L L L L . . . K K K K"
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . M M M M M M M M"
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    "N N N N . . . . . . . ."
+    ". . . . . . . P P P P P"
+    ". . . O O O O O O O O ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". Q Q Q Q . . . . . . ."
+    ". Q Q Q Q . . . S S S S"
+    ". . . . . . . . S S S S"
+    ". R R R R . . . . . . ."
+    ". . . . . . . . U U U U"
+    ". V V V V V V V V . . ."
+    ". . . . . . . . . . . ."
+    ". W W W W W . . T T T T" ;}
+
+
+/* LANDSCAPE ---------------------------- */
+
+
+/* Ring Table - E */
+.grid-abstract [product-name="ring-table"] {grid-area: E; aspect-ratio: var(--lan-ratio); max-width: var(--lan); margin-left: auto;}
+.grid-abstract [product-name="ring-table"] .card-image {transform: scale(1.05) translateY(-14%);}
+.grid-abstract [product-name="ring-table"].enable-transition:hover .card-image {transform: scale(.67);} 
+/* Odeon Table - O */
+.grid-abstract [product-name="odeon-table"] {grid-area: O; aspect-ratio: var(--lan-ratio); max-width: var(--lan); margin-right: auto;}
+.grid-abstract [product-name="odeon-table"] .card-image  {transform: scale(1) translateY(-16%) translateX(1%);}
+.grid-abstract [product-name="odeon-table"].enable-transition:hover .card-image {transform: scale(.65);} 
+/* Gem Table - A */
+.grid-abstract [product-name="gem-table"] {grid-area: A; aspect-ratio: var(--lan-ratio); max-width: var(--lan); }
+.grid-abstract [product-name="gem-table"] .card-image {width: var(--lan-img);}
+.grid-abstract [product-name="gem-table"].enable-transition:hover .card-image {transform: scale(3.5) translateY(-14%);}    
+/* Milan Table - J */
+.grid-abstract [product-name="milan-table"] {grid-area: J; aspect-ratio: var(--lan-ratio); max-width: var(--lan); margin-left: auto;}
+.grid-abstract [product-name="milan-table"] .card-image {width: var(--lan-img);}
+.grid-abstract [product-name="milan-table"].enable-transition:hover .card-image {transform: scale(2.5);}
+/* Chelsea Wall - M */
+.grid-abstract [product-name="chelsea-wall"] {grid-area: M; aspect-ratio: var(--lan-ratio); max-width: var(--lan);}
+.grid-abstract [product-name="chelsea-wall"] .card-image {width: var(--lan-img);}
+.grid-abstract [product-name="chelsea-wall"].enable-transition:hover .card-image {transform: scale(3.2) translateY(-17%);}
+/* Flo Wall - V */
+.grid-abstract [product-name="flo-wall"] {grid-area: V; aspect-ratio: var(--lan-ratio); max-width: var(--lan);}
+.grid-abstract [product-name="flo-wall"] .card-image {width: var(--lan-img);}
+.grid-abstract [product-name="flo-wall"].enable-transition:hover .card-image {transform: scale(3.3) translateY(-15%);}
+
+
+/* PORTRAIT ----------------------------- */
+
+/* Eaton Table - D */
+.grid-abstract [product-name="eaton-table"] {grid-area: D; aspect-ratio: var(--por-ratio); max-width: var(--por); margin-right: auto;}
+.grid-abstract [product-name="eaton-table"] .card-image  {transform: scale(1.7) translateY(-10%) translateX(3%);}
+.grid-abstract [product-name="eaton-table"].enable-transition:hover .card-image {transform: scale(1);}
+/* Jazz Table - F */
+.grid-abstract [product-name="jazz-table"] {grid-area: F; aspect-ratio: var(--por-ratio); max-width: var(--por-sm); margin-left: auto;}
+.grid-abstract [product-name="jazz-table"] .card-image {transform: scale(1.2) translateY(0%);}
+.grid-abstract [product-name="jazz-table"].enable-transition:hover .card-image {transform: scale(1.95) translateY(-15%);}
+/* Venice Table - G */
+.grid-abstract [product-name="venice-table"] {grid-area: G; aspect-ratio: var(--por-ratio); max-width: var(--por-sm);}
+.grid-abstract [product-name="venice-table"] .card-image {transform: scale(1.2) translateY(0%);}
+.grid-abstract [product-name="venice-table"].enable-transition:hover .card-image {transform: scale(1.95) translateY(-15%);}
+/* Chiswick Table - H */
+.grid-abstract [product-name="chiswick-table"] {grid-area: H; aspect-ratio: var(--por-ratio); max-width: var(--por); margin-left: auto;}
+.grid-abstract [product-name="chiswick-table"] .card-image {width: var(--por-img);}
+.grid-abstract [product-name="chiswick-table"].enable-transition:hover .card-image {transform: scale(3) translateY(-12%);}
+/* Heron Table - L */
+.grid-abstract [product-name="heron-table"] {grid-area: L; aspect-ratio: var(--por-ratio); max-width: var(--por); margin-right: auto;}
+.grid-abstract [product-name="heron-table"] .card-image {width: var(--por-img);}
+.grid-abstract [product-name="heron-table"].enable-transition:hover .card-image {transform: scale(2.8);}
+/* Chelsea Table - N */
+.grid-abstract [product-name="chelsea-table"] {grid-area: N; aspect-ratio: var(--por-ratio); max-width: var(--por); margin-left: auto;}
+.grid-abstract [product-name="chelsea-table"] .card-image {width: var(--por-img);}
+.grid-abstract [product-name="chelsea-table"].enable-transition:hover .card-image {transform: scale(3.2) translateY(-10%);}
+/* Berlin Table - R */
+.grid-abstract [product-name="berlin-table"] {grid-area: R; aspect-ratio: var(--por-ratio); max-width: var(--por);  margin-left: auto;}
+.grid-abstract [product-name="berlin-table"] .card-image {width: var(--por-img);}
+.grid-abstract [product-name="berlin-table"].enable-transition:hover .card-image {transform: scale(3) translateY(-10%);}
+/* Flo Table - U */
+.grid-abstract [product-name="flo-table"] {grid-area: U; aspect-ratio: var(--por-ratio); max-width: var(--por); margin-left: auto;}
+.grid-abstract [product-name="flo-table"] .card-image {transform: scale(3.2) translateY(-18%);}
+.grid-abstract [product-name="flo-table"].enable-transition:hover .card-image {transform: scale(1.2) translateY(0);}
+/* Vetro Table - T */
+.grid-abstract [product-name="vetro-table"] {grid-area: T; aspect-ratio: var(--por-ratio); max-width: var(--por);}
+.grid-abstract [product-name="vetro-table"] .card-image {width: var(--por-img);}
+.grid-abstract [product-name="vetro-table"].enable-transition:hover .card-image {transform: scale(3.5) translateY(-16%);}
+/* Tripod Floor - S */
+.grid-abstract [product-name="tripod-floor"] {grid-area: S; aspect-ratio: var(--por-tall-ratio-2); max-width: var(--por-tall);}
+.grid-abstract [product-name="tripod-floor"] .card-image {width: var(--por-tall-img-2);}
+.grid-abstract [product-name="tripod-floor"].enable-transition:hover .card-image {transform: scale(4) translateY(-25%) translateX(1%);}
+
+
+
+/* BOX ---------------------------------- */
+/* Fig Table - I */
+.grid-abstract [product-name="fig-table"] {grid-area: I; max-width: var(--box-sm);}
+.grid-abstract [product-name="fig-table"] .card-image {transform: scale(2) translateY(-22%);}
+.grid-abstract [product-name="fig-table"].enable-transition:hover .card-image {transform: scale(1.4) translateY(-9%);}
+/* Portland Pendant - K */
+.grid-abstract [product-name="portland-pendant"] {grid-area: K; max-width:var(--box-sm);}
+.grid-abstract [product-name="portland-pendant"] .card-image {transform: scale(1.4) translateY(-15%);}
+.grid-abstract [product-name="portland-pendant"].enable-transition:hover .card-image {transform: scale(1.1) translateY(-5%); }
+/* Abbey Pendant - B */
+.grid-abstract [product-name="abbey-pendant"] {grid-area: B; max-width: var(--box); }
+.grid-abstract [product-name="abbey-pendant"] .card-image {transform: scale(1) translateY(-5%);}
+.grid-abstract [product-name="abbey-pendant"].enable-transition:hover .card-image {transform: scale(1.4) translateY(-8%);}
+/* Jasper Table - C */
+.grid-abstract [product-name="jasper-table"] {grid-area: C; max-width:var(--box-lg);  margin: auto;}
+.grid-abstract [product-name="jasper-table"] .card-image {transform: scale(1.5) translateY(-16%);}
+.grid-abstract [product-name="jasper-table"].enable-transition:hover .card-image {transform: scale(1) translateY(0%);} 
+/* Berlin Wall - Q */
+.grid-abstract [product-name="berlin-wall"] {grid-area: Q; max-width: var(--box-lg);}
+.grid-abstract [product-name="berlin-wall"] .card-image {width: var(--box-img);}
+.grid-abstract [product-name="berlin-wall"].enable-transition:hover .card-image {transform: scale(3.35) translateY(-14%) translateX(-10%);}
+/* Josef Table - P */
+.grid-abstract [product-name="josef-table"] {grid-area: P; max-width: var(--box-lg);}
+.grid-abstract [product-name="josef-table"] .card-image {width: var(--box-img);}
+.grid-abstract [product-name="josef-table"].enable-transition:hover .card-image {transform: scale(3.3) translateY(-15%);}
+/* Lens Table - W */
+.grid-abstract [product-name="lens-table"] {grid-area: W; max-width:var(--box-lg);}
+.grid-abstract [product-name="lens-table"] .card-image{transform: scale(1.5) translateY(-15%);}
+.grid-abstract [product-name="lens-table"].enable-transition:hover .card-image {transform: scale(.95) translateY(0%);}
+
+/*
+E - Ring Table
+B - Abbey Pendant
+D - Eaton Table
+C - Jasper Table
+F - Jazz Table
+G - Venice Table
+A - Gem Table
+H - Chiswick Table
+I - Fig Table
+J - Milan Table
+L - Heron Table
+K - Portland Pendant
+M - Chelsea Wall
+N - Chelsea Table
+P - Josef Table
+O - Odeon Table
+R - Berlin Table
+Q - Berlin Wall
+S - Tripod Floor
+U - Flo Table
+V - Flo Wall
+W - Lens Table
+T - Vetro Table
+*/
+
+  /* Grid - Tablet ---------------------- */
+  
+  @media only screen and (max-width: 1024px) {
+    .grid-abstract {
+      grid-template-areas:
+      ". . . . . . . . . . . ."
+      ". . . . E E E E E E E E" 
+      ". . . . . . . . . . . ."
+      "B B B B B . . . . . . ."
+      ". . . . . . . . D D D D"
+      ". . C C C C . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . . . F F F F G G G G"
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      "A A A A A A A A . . . ." 
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . . . . . . H H H H ."
+      "I I I I . . . . . . . ."
+      ". . . J J J J J J J J ."
+      ". . . . . . . . . . . ." 
+      ". . . . . . . . . . . ."     
+      ". L L L L . . . . . . ."
+      ". L L L L . . . K K K K"
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . . . M M M M M M M M"
+      ". . . . . . . . . . . ."
+      "N N N N . . . . . . . ."
+      ". . . . . . . P P P P P"
+      ". . O O O O O O O O . ."
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      "Q Q Q Q Q . . . . . . ."
+      "Q Q Q Q Q . . . S S S S"
+      ". . . . . . . . S S S S"
+      ". . . . . . . . S S S S"
+      ". . . . . . . . S S S S"
+      ". . R R R R . . . . . ."
+      ". . . . . . . . U U U U"
+      ". . . . . . . . . . . ."
+      "V V V V V V V V . . . ."
+      ". . . . . . . . T T T T"
+      ". W W W W W . . . . . ."
+      ;}  
+    
+    .grid-abstract [product-name="fig-table"] {margin-right: auto;}
+}

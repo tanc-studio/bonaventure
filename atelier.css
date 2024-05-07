@@ -1,0 +1,183 @@
+.grid-abstract  {
+ grid-template-areas:
+   ". . . . . . . . . . . ."
+   ". J J J J . . . . . . ."
+   ". . . . . . . . . . . ."
+   ". . . . . . . . . . . ."
+   ". . . A A A A A A A A ."
+   "B B B E E E . . . . . ."
+   ". . . . . . . . . . . ."
+   ". . . . . . . C C C C ."
+   ". D D D D D . . . . . ."
+   ". . . . . . I I I I I ."
+   ". . . . . . . . . . . ."
+   ". M M M M M M M M . . ."
+   ". . . . . . . . . . . ."
+   ". . O O O O . . P P P P"
+   ". . O O O O . . P P P P"
+   ". . . . . . . . P P P P"
+   ". . . . . . . . . . . ."
+   ". . . . . L L L L L L ."
+   ". . . . . . . . . . . ."
+   ". N N N N N N N N . . ."
+   ". . . . . . . . . . . ."
+   ". . . . . . . . R R R R"
+   ". Q Q Q Q . . . R R R R"
+   ". Q Q Q Q . . . . . . ."
+   ". Q Q Q Q . H H H H H ."
+   ". . . . . . H H H H H ."
+   ". . . . . . H H H H H ."
+   ". . . . . . . . . . . ."
+   ". K K K K K K K K . . ."
+   ". . . . . . . . . . . ."
+   ". . . . . . . . G G G G"
+   ". . F F F F F . . . . .";
+ }
+ 
+/* LANDSCAPE ---------------------------- */
+
+/* Fern Wall - A */
+.grid-abstract [product-name="fern-wall"] {grid-area: A; aspect-ratio: var(--lan-ratio); max-width: var(--lan); margin-left: auto;}
+.grid-abstract [product-name="fern-wall"] .card-image {width: var(--lan-img);}
+.grid-abstract [product-name="fern-wall"].enable-transition:hover .card-image {transform: scale(2.9) translateY(-8%);}
+/* Flowers Table - N */
+.grid-abstract [product-name="flowers-table"] {grid-area: N; aspect-ratio: var(--lan-ratio); max-width: var(--lan);}
+.grid-abstract [product-name="flowers-table"]  .card-image {transform: scale(0.9) translateY(-15%);}
+.grid-abstract [product-name="flowers-table"].enable-transition:hover .card-image {transform: scale(0.65)}
+/* Grasses Wall - K */
+.grid-abstract [product-name="grasses-wall"] {grid-area: K; aspect-ratio: var(--lan-ratio); max-width: var(--lan);}
+.grid-abstract [product-name="grasses-wall"] .card-image {width: var(--lan-img);}
+.grid-abstract [product-name="grasses-wall"].enable-transition:hover .card-image  {transform: scale(3) translateY(15%);}
+/* Tree Table - M */
+.grid-abstract [product-name="tree-table"] {grid-area: M; aspect-ratio: var(--lan-ratio); max-width: var(--lan);}
+.grid-abstract [product-name="tree-table"] .card-image  {transform: scale(1) translateY(-15%);}
+.grid-abstract [product-name="tree-table"].enable-transition:hover .card-image {transform: scale(0.65)}
+
+
+/* PORTRAIT ----------------------------- */
+
+/* Season Bracelet Rose Wall - B */
+.grid-abstract [product-name="season-bracelet-rose-wall"] {grid-area: B; aspect-ratio: var(--por-ratio); max-width: var(--por-sm); margin-left: auto;}
+.grid-abstract [product-name="season-bracelet-rose-wall"] .card-image {transform: var(--por-scale) translateX(-1%);}
+.grid-abstract [product-name="season-bracelet-rose-wall"].enable-transition:hover .card-image {transform: scale(1.85);}
+/* Season Rose Wall - E */
+.grid-abstract [product-name="season-rose-wall"] {grid-area: E; aspect-ratio: var(--por-ratio); max-width: var(--por-sm); margin-right: auto;}
+.grid-abstract [product-name="season-rose-wall"] .card-image {transform: var(--por-scale) translateX(-1%);}
+.grid-abstract [product-name="season-rose-wall"].enable-transition:hover .card-image {transform: scale(1.85);}
+/* Season Spring Wall - C */
+.grid-abstract [product-name="season-spring-wall"] {grid-area: C; aspect-ratio: var(--por-ratio); max-width: var(--por); margin-left: auto;}
+.grid-abstract [product-name="season-spring-wall"] .card-image {width: var(--por-img);}
+.grid-abstract [product-name="season-spring-wall"].enable-transition:hover .card-image {transform: scale(3) translateY(-4%);}     
+/* Rose Silver Bracelet Table - Q */
+.grid-abstract [product-name="rose-silver-bracelet-table"] {grid-area: Q; aspect-ratio: var(--por-tall-ratio); max-width: var(--por-tall); margin-right: auto;}
+.grid-abstract [product-name="rose-silver-bracelet-table"] .card-image {width: var(--por-tall-img);}
+.grid-abstract [product-name="rose-silver-bracelet-table"].enable-transition:hover .card-image {transform: scale(3.1) translateY(-14%);}
+/* Rose Stone Table - P */
+.grid-abstract [product-name="rose-stone-table"] {grid-area: P; aspect-ratio: var(--por-tall-ratio); max-width: var(--por-tall);}
+.grid-abstract [product-name="rose-stone-table"] .card-image {width: var(--por-tall-img);}
+.grid-abstract [product-name="rose-stone-table"].enable-transition:hover .card-image {transform: scale(3) translateY(-13%);}
+
+
+/* BOX ---------------------------------- */
+
+/* Bird Wall - L */
+.grid-abstract [product-name="bird-wall"] {grid-area: L; max-width: var(--box-lg); margin: auto;}
+.grid-abstract [product-name="bird-wall"] .card-image {transform: scale(1.65) translateY(-10%);}
+.grid-abstract [product-name="bird-wall"].enable-transition:hover .card-image {transform: scale(1.2) translateY(-9%);}
+/* Dragonfly Wall - G */
+.grid-abstract [product-name="dragonfly-wall"] {grid-area: G; max-width: var(--box);}
+.grid-abstract [product-name="dragonfly-wall"] .card-image {transform: scale(1.65) translateY(-18%);}
+.grid-abstract [product-name="dragonfly-wall"].enable-transition:hover .card-image  {transform: scale(1) translateY(-0%);}
+/* Flowers Wall - R */
+.grid-abstract [product-name="flowers-wall"] {grid-area: R; max-width: var(--box); }
+.grid-abstract [product-name="flowers-wall"] .card-image {transform: scale(1.6) translateY(2%);}
+.grid-abstract [product-name="flowers-wall"].enable-transition:hover .card-image {transform: var(--box-scale) translateY(4%);}   
+/* Season Autumn Wall - D */
+.grid-abstract [product-name="season-autumn-wall"] {grid-area: D; max-width: var(--box-lg); margin-left: auto;} 
+.grid-abstract [product-name="season-autumn-wall"] .card-image  {transform: scale(1.6) translateY(2%);}
+.grid-abstract [product-name="season-autumn-wall"].enable-transition:hover .card-image {transform: var(--box-scale) translateY(4%);}
+/* Roma Wall - O */
+.grid-abstract [product-name="roma-wall"] {grid-area: O; max-width: var(--box-sm);}
+.grid-abstract [product-name="roma-wall"] .card-image {width: 48%;}
+.grid-abstract [product-name="roma-wall"].enable-transition:hover .card-image {transform: scale(3);}
+/* Blossom Wall - J */
+.grid-abstract [product-name="blossom-wall"] {grid-area: J; max-width: var(--box); margin-right: auto;}
+.grid-abstract [product-name="blossom-wall"] .card-image {width: var(--box-img);}
+.grid-abstract [product-name="blossom-wall"].enable-transition:hover .card-image {transform: scale(3) translateY(-12%);} 
+/* Peacock Wall - I */
+.grid-abstract [product-name="peacock-wall"] { grid-area: I; max-width: var(--box); margin-left: auto;}
+.grid-abstract [product-name="peacock-wall"] .card-image {width: var(--box-img);}
+.grid-abstract [product-name="peacock-wall"].enable-transition:hover .card-image {transform: scale(3) translateY(-10%);}
+/* Butterfly Wall - F */
+.grid-abstract [product-name="butterfly-wall"] {grid-area: F; max-width: var(--box-lg);}
+.grid-abstract [product-name="butterfly-wall"] .card-image {width: var(--box-img);}
+.grid-abstract [product-name="butterfly-wall"].enable-transition:hover .card-image {transform: scale(3) translateY(-13%);}
+/* Swirl Table - H */
+.grid-abstract [product-name="swirl-table"] {grid-area: H; max-width: var(--box-lg);  margin-left: auto;}
+.grid-abstract [product-name="swirl-table"] .card-image {transform: var(--box-scale) translateY(0);}
+.grid-abstract [product-name="swirl-table"].enable-transition:hover .card-image {transform: scale(1.55) translateY(-16%);}
+
+/*
+J - Blossom Wall
+L - Bird Wall
+F - Butterfly Wall
+G - Dragonfly Wall
+A - Fern Wall
+N - Flowers Table
+R - Flowers Wall
+K - Grasses Wall
+I - Peacock Wall
+O - Roma Wall
+Q - Rose Silver Bracelet Table
+P - Rose Stone Table
+D - Season Autumn Wall
+B - Season Bracelet Rose Wall
+E - Season Rose Wall
+C - Season Spring Wall
+H - Swirl Table
+M - Tree Table
+*/
+ 
+ @media only screen and (max-width: 1024px) { 
+   .grid-abstract {
+     grid-template-areas:      
+       ". . . . . . . . . . . ."
+       ". J J J J . . . . . . ."
+       ". . . . . . . . . . . ."
+       ". . . . . . . . . . . ."
+       ". . . . A A A A A A A A"
+       ". . . . . . . . . . . ."
+       "B B B B E E E E . . . ."
+       ". . . . . . . . . . . ."
+       ". . . . . . . . . . . ."
+       ". . . . . . . C C C C ."
+       ". D D D D . . . . . . ."
+       ". . . . . . . I I I I I"
+       ". . . . . . . . . . . ."
+       ". M M M M M M M M . . ."
+       ". . . . . . . . . . . ."
+       ". . . . . . . . . . . ."
+       ". O O O O . . . P P P P"
+       ". O O O O . . . P P P P"
+       ". . . . . . . . P P P P"
+       ". . . . . . . . . . . ."
+       ". . . . L L L L L . . ."
+       ". . . . . . . . . . . ."
+       "N N N N N N N N . . . ."
+       ". . . . . . . . . . . ."
+       ". . . . . . . . . . . ."
+       ". . . . . . . . R R R R"
+       ". Q Q Q Q . . . R R R R"
+       ". Q Q Q Q . . . . . . ."
+       ". Q Q Q Q . . H H H H H"
+       ". . . . . . . H H H H H"
+       ". . . . . . . H H H H H"
+       ". . . . . . . . . . . ."
+       ". . . . . . . . . . . ."
+       ". K K K K K K K K K . ."
+       ". . . . . . . . . . . ."
+       ". . . . . . . . G G G G"
+       "F F F F F . . . . . . ."; }}
+
+
+
