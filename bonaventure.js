@@ -1,5 +1,3 @@
-//<script src="https://8cvd38-5000.csb.app/bon.js"></script> 
-
 // Page Scroll-----------------------------------------------------------
 let lenis
 if (Webflow.env('editor') === undefined) {
@@ -15,7 +13,6 @@ if (Webflow.env('editor') === undefined) {
     requestAnimationFrame(raf)}
   requestAnimationFrame(raf)}
   
-
 $('[data-lenis-start]').on('click', function () {lenis.start()})
 $('[data-lenis-stop]').on('click', function () { lenis.stop()})
 $('[data-lenis-toggle]').on('click', function () {
@@ -78,9 +75,17 @@ setTimeout(() => {
 
 gsap.registerPlugin(ScrollTrigger);
 let cardInfoTimelines = [];
+
 function runGsapAnimations() {
   clearGsapAnimations();
   const isTabletOrSmaller = window.matchMedia("(max-width: 1024px)").matches;
+  const isMobileOrSmaller = window.matchMedia("(max-width: 767px)").matches;
+  
+  if (isMobileOrSmaller) {
+    // Disable GSAP animations for screen widths below 767 pixels
+    return;
+  }
+  
   const baseDisplacements = {
     'fern-wall': '-45%',
     'season-autumn-wall': '-40%',
@@ -200,7 +205,8 @@ function toggleGrid() {
     ? 'GRIDNORMAL'
     : 'GRIDABSTRACT';
   localStorage.setItem('PageTheme', theme);
-  window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on grid toggle
+
+  lenis.scrollTo(0, { duration: 1, smooth: true });// Scroll to top on grid toggle
   handleAlphabeticalSorting();}
 
 function handleAlphabeticalSorting() {
@@ -242,47 +248,44 @@ function sortCardsByFirstLetter(cards) {
 }
 
 function applySavedTheme() {
-  const savedTheme = localStorage.getItem('PageTheme')
+  const savedTheme = localStorage.getItem('PageTheme');
   if (window.innerWidth > 767) {
     if (savedTheme === 'GRIDNORMAL') {
-      gridContainer.classList.add('grid-normal')
-      gridContainer.classList.remove('grid-abstract')
+      gridContainer.classList.add('grid-normal');
+      gridContainer.classList.remove('grid-abstract');
     } else {
-      gridContainer.classList.add('grid-abstract')
-      gridContainer.classList.remove('grid-normal')
+      gridContainer.classList.add('grid-abstract');
+      gridContainer.classList.remove('grid-normal');
     }
   } else {
-    gridContainer.classList.add('grid-normal')
-    gridContainer.classList.remove('grid-abstract')
+    gridContainer.classList.add('grid-normal');
+    gridContainer.classList.remove('grid-abstract');
   }
 }
 
 function toggleIcon() {
-  const iconA = document.querySelector('.icon-a')
-  const iconB = document.querySelector('.icon-b')
+  const iconA = document.querySelector('.icon-a');
+  const iconB = document.querySelector('.icon-b');
 
   if (iconA && iconB) {
-    iconA.classList.toggle('icon-visible')
-    iconB.classList.toggle('icon-visible')
+    const isGridNormal = gridContainer.classList.contains('grid-normal');
+    iconA.classList.toggle('icon-visible', !isGridNormal);
+    iconB.classList.toggle('icon-visible', isGridNormal);
 
-    const visibleIcon = iconA.classList.contains('icon-visible') ? 'A' : 'B'
-    sessionStorage.setItem('VisibleIcon', visibleIcon)
+    const visibleIcon = isGridNormal ? 'B' : 'A';
+    sessionStorage.setItem('VisibleIcon', visibleIcon);
   }
 }
 
 function applySavedIconState() {
-  const savedIcon = sessionStorage.getItem('VisibleIcon')
-  const iconA = document.querySelector('.icon-a')
-  const iconB = document.querySelector('.icon-b')
+  const savedIcon = sessionStorage.getItem('VisibleIcon');
+  const iconA = document.querySelector('.icon-a');
+  const iconB = document.querySelector('.icon-b');
 
   if (iconA && iconB) {
-    if (savedIcon === 'B') {
-      iconA.classList.remove('icon-visible')
-      iconB.classList.add('icon-visible')
-    } else {
-      iconA.classList.add('icon-visible')
-      iconB.classList.remove('icon-visible')
-    }
+    const isGridNormal = savedIcon === 'B';
+    iconA.classList.toggle('icon-visible', !isGridNormal);
+    iconB.classList.toggle('icon-visible', isGridNormal);
   }
 }
 
